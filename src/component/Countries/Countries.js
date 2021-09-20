@@ -12,14 +12,11 @@ const Countries = () => {
   return (
     <div className="countries">
       <h2>We are traveling all countries in the world.{countries.length}</h2>
-      {countries.map((country) => (
-        <Country
-          flag={country.flag}
-          name={country.name}
-          capital={country.capital}
-          population={country.population}
-        ></Country>
-      ))}
+      <div className="all-countries">
+        {countries.map((country) => (
+          <Country country={country}></Country>
+        ))}
+      </div>
     </div>
   );
 };
