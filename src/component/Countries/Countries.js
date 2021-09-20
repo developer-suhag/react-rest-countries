@@ -11,10 +11,13 @@ const Countries = () => {
   }, []);
   return (
     <div className="countries">
-      <h2>We are traveling all countries in the world.{countries.length}</h2>
+      <h2>
+        We are traveling all countries in the world. {countries.length}{" "}
+        Countries.
+      </h2>
       <div className="all-countries">
         {countries.map((country) => (
-          <Country country={country}></Country>
+          <Country key={country.alpha3Code} country={country}></Country>
         ))}
       </div>
     </div>

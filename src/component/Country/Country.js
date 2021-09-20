@@ -6,11 +6,13 @@ const Country = (props) => {
   return (
     <div className="country">
       <img src={flag} alt="" />
-      <h3>{name}</h3>
-      <p>
-        <small>Region: {region}</small>
+      <h3 style={{ marginBottom: "5px" }}>{name}</h3>
+      <p style={{ marginBottom: "5px" }}>
+        <small>
+          Region: <b>{region}</b>
+        </small>
       </p>
-      <p>{capital}</p>
+      <h4 style={{ marginBottom: "10px" }}>Capital: {capital}</h4>
       <p>Population: {population}</p>
     </div>
   );
